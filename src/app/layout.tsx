@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'EAPMED — Academia Europea de Medicina | Curso Online',
+  title: 'EAPMED — Vision of the Experts | European Academy of Personalized Medicine',
   description:
-    'Formación médica online de nivel europeo. Curso con casos clínicos reales, tutorías con especialistas y certificación de la Academia Europea de Medicina.',
+    'TOUR EAPMED: Vision of the Experts 2025. Un evento médico dinámico y vanguardista en la Real Academia de Medicina de Cataluña, con más de 40 expertos internacionales.',
 }
 
 export default function RootLayout({

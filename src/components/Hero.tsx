@@ -1,65 +1,64 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { HERO, STATS } from '@/content/site'
+import { HERO } from '@/content/site'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-14 items-center">
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-teal-soft text-teal text-xs font-medium px-4 py-1.5 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal" />
-            {HERO.badge}
-          </span>
+    <section className="bg-bg pb-16 lg:pb-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-line bg-panel text-mist text-xs px-4 py-1.5 mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+          {HERO.badge}
+        </span>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.08] text-navy mb-6">
+        <h1 className="mb-3">
+          <span className="font-display text-5xl sm:text-6xl lg:text-8xl text-gold tracking-wide">
+            <span className="text-white">
+              {HERO.titlePrefix}
+              <sup className="text-[0.45em] font-sans font-light align-super">{HERO.titleOrdinal}</sup>
+            </span>{' '}
             {HERO.title}
-          </h1>
+          </span>
+        </h1>
+        <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-white/90 mb-10">
+          {HERO.subtitle}
+        </p>
 
-          <p className="text-lg text-ink-soft leading-relaxed max-w-xl mb-9">{HERO.subtitle}</p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/checkout"
-              className="rounded-full bg-navy text-paper text-sm font-medium px-8 py-4 text-center hover:bg-navy-soft transition-colors"
-            >
-              {HERO.primaryCta}
-            </Link>
-            <Link
-              href="/#programa"
-              className="rounded-full border border-navy/25 text-navy text-sm font-medium px-8 py-4 text-center hover:border-navy transition-colors"
-            >
-              {HERO.secondaryCta}
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative">
-          <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-teal-soft via-transparent to-gold-soft -z-10" />
-          <div className="relative aspect-[4/5] max-h-[560px] w-full overflow-hidden rounded-[1.5rem] shadow-xl shadow-navy/10">
-            <Image
-              src={HERO.image}
-              alt={HERO.imageAlt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-paper shadow-lg shadow-navy/10 border border-line px-6 py-5">
-            <p className="font-display text-3xl text-navy leading-none mb-1">4,9/5</p>
-            <p className="text-xs text-ink-mute">Valoración media de los alumnos</p>
-          </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <Link
+            href="/checkout"
+            className="rounded-full bg-white text-ink text-sm font-medium px-8 py-3.5 hover:bg-gold hover:text-ink transition-colors"
+          >
+            {HERO.primaryCta}
+          </Link>
+          <Link
+            href="/#temas"
+            className="rounded-full border border-line bg-panel text-white text-sm font-medium px-8 py-3.5 hover:border-mist transition-colors"
+          >
+            {HERO.secondaryCta}
+          </Link>
         </div>
       </div>
 
-      {/* Barra de estadísticas */}
-      <div className="border-y border-line bg-paper">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-display text-3xl lg:text-4xl text-navy mb-1">{stat.value}</p>
-              <p className="text-sm text-ink-mute">{stat.label}</p>
+      {/* Carrusel de imágenes del hero */}
+      <div className="marquee">
+        <div className="marquee-track">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex shrink-0">
+              {HERO.images.map((src, i) => (
+                <div key={`${copy}-${i}`} className="flex shrink-0 items-stretch">
+                  <div className="w-64 sm:w-80 lg:w-96 aspect-[4/3] mr-5 rounded-2xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt="" className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  {/* Tarjeta +40 Experts intercalada en el carrusel */}
+                  {i === 2 && (
+                    <div className="w-44 sm:w-52 mr-5 rounded-2xl bg-teal flex flex-col items-center justify-center gap-1 text-white">
+                      <span className="font-display text-4xl sm:text-5xl">{HERO.expertsCard.value}</span>
+                      <span className="text-sm tracking-[0.14em] uppercase">{HERO.expertsCard.label}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </div>

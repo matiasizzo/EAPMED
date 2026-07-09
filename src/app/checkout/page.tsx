@@ -63,22 +63,22 @@ export default function CheckoutPage() {
             options={{
               clientSecret,
               appearance: {
-                theme: 'flat',
+                theme: 'night',
                 variables: {
-                  colorPrimary: '#0c2340',
-                  colorBackground: '#ffffff',
-                  colorText: '#101828',
-                  colorDanger: '#dc2626',
+                  colorPrimary: '#41b9f8',
+                  colorBackground: '#1a1a1f',
+                  colorText: '#f4f4f5',
+                  colorDanger: '#e14848',
                   fontFamily: 'Inter, sans-serif',
                   borderRadius: '10px',
                   fontSizeBase: '14px',
                 },
                 rules: {
-                  '.Input': { border: '1px solid #e4e7ec', padding: '12px 16px', backgroundColor: '#ffffff' },
-                  '.Input:focus': { border: '1px solid #0c2340', boxShadow: 'none' },
-                  '.Label': { fontSize: '12px', letterSpacing: '0.04em', color: '#475467', marginBottom: '6px' },
-                  '.Tab': { border: '1px solid #e4e7ec', borderRadius: '10px' },
-                  '.Tab--selected': { border: '1px solid #0c2340' },
+                  '.Input': { border: '1px solid #26262c', padding: '12px 16px', backgroundColor: '#1a1a1f' },
+                  '.Input:focus': { border: '1px solid #41b9f8', boxShadow: 'none' },
+                  '.Label': { fontSize: '12px', letterSpacing: '0.04em', color: '#a7a7b0', marginBottom: '6px' },
+                  '.Tab': { border: '1px solid #26262c', borderRadius: '10px', backgroundColor: '#1a1a1f' },
+                  '.Tab--selected': { border: '1px solid #41b9f8' },
                 },
               },
             }}

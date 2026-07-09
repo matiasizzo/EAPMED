@@ -1,279 +1,263 @@
 /*
- * Contenido de la web EAPMED.
- * Todos los textos son placeholders editables: al comparar con la maqueta
- * de Framer, basta con ajustar este archivo (y los tokens de globals.css)
- * sin tocar los componentes.
+ * Contenido de la web EAPMED, según la maqueta de Framer.
+ * Los títulos legibles del print se copiaron literalmente; los párrafos
+ * que no se distinguen en la captura son placeholders editables.
+ * Las imágenes son placeholders de Unsplash/randomuser: sustituir por las reales.
  */
 
 export const SITE = {
   name: 'EAPMED',
-  fullName: 'Academia Europea de Medicina',
-  tagline: 'Formación médica de excelencia, avalada en Europa',
+  fullName: 'European Academy of Personalized Medicine',
   email: 'info@eapmed.org',
-  phone: '+34 900 000 000',
-  address: 'Madrid · España',
+  address: 'Carrer del Carme 47, Barcelona',
 }
 
 export const NAV_LINKS = [
-  { label: 'Programa', href: '/#programa' },
-  { label: 'Metodología', href: '/#metodologia' },
-  { label: 'Profesorado', href: '/#profesorado' },
-  { label: 'Opiniones', href: '/#opiniones' },
-  { label: 'FAQ', href: '/#faq' },
+  { label: 'Home', href: '/' },
+  { label: 'Inscripción', href: '/checkout' },
+  { label: 'Temas', href: '/#temas' },
+  { label: 'Alojamiento', href: '/#sede' },
+  { label: 'Contacto', href: '/#contacto' },
+]
+
+export const SOCIALS = [
+  { label: 'Instagram', href: '#', icon: 'instagram' },
+  { label: 'Facebook', href: '#', icon: 'facebook' },
+  { label: 'LinkedIn', href: '#', icon: 'linkedin' },
+  { label: 'YouTube', href: '#', icon: 'youtube' },
 ]
 
 export const HERO = {
-  badge: 'Convocatoria abierta — plazas limitadas',
-  title: 'Impulsa tu carrera médica con formación de nivel europeo',
-  subtitle:
-    'Curso online de la Academia Europea de Medicina: aprende de especialistas en activo, a tu ritmo y con certificación al finalizar. Diseñado para médicos, residentes y estudiantes de ciencias de la salud.',
-  primaryCta: 'Inscribirme ahora',
-  secondaryCta: 'Ver el programa',
-  image:
-    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80',
-  imageAlt: 'Profesional médico durante una formación clínica',
-}
-
-export const STATS = [
-  { value: '+2.500', label: 'Alumnos formados' },
-  { value: '40 h', label: 'De contenido en vídeo' },
-  { value: '12', label: 'Módulos especializados' },
-  { value: '4,9/5', label: 'Valoración media' },
-]
-
-export const FEATURES = {
-  eyebrow: 'Metodología',
-  title: 'Una formación pensada para profesionales de la salud',
-  subtitle:
-    'Combinamos rigor académico, casos clínicos reales y flexibilidad total para que puedas formarte sin dejar tu práctica.',
-  items: [
-    {
-      title: '100 % online y a tu ritmo',
-      description:
-        'Accede a las clases cuando quieras, desde cualquier dispositivo, con acceso de por vida al contenido y sus actualizaciones.',
-      icon: 'laptop',
-    },
-    {
-      title: 'Casos clínicos reales',
-      description:
-        'Cada módulo se apoya en casos reales comentados por especialistas, para llevar la teoría directamente a la consulta.',
-      icon: 'stethoscope',
-    },
-    {
-      title: 'Certificación al finalizar',
-      description:
-        'Obtén un certificado de la Academia Europea de Medicina que acredita las horas y competencias adquiridas.',
-      icon: 'certificate',
-    },
-    {
-      title: 'Tutorías con especialistas',
-      description:
-        'Resuelve tus dudas en sesiones en directo y en el foro privado del curso, con respuesta garantizada del equipo docente.',
-      icon: 'chat',
-    },
-    {
-      title: 'Material descargable',
-      description:
-        'Guías de práctica, protocolos y resúmenes descargables en PDF para consultar en tu día a día profesional.',
-      icon: 'download',
-    },
-    {
-      title: 'Comunidad profesional',
-      description:
-        'Forma parte de una red europea de médicos y estudiantes con los que compartir experiencia y oportunidades.',
-      icon: 'community',
-    },
+  badge: 'TOUR EAPMED · Barcelona 2025',
+  titlePrefix: '1',
+  titleOrdinal: 'st',
+  title: 'EAPMED',
+  subtitle: 'Vision of the Experts',
+  primaryCta: 'Hacer inscripción',
+  secondaryCta: 'Temas abordados',
+  expertsCard: { value: '+40', label: 'Experts' },
+  images: [
+    'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1583912267550-d44c9c31f6cb?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=900&q=80',
+    'https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=900&q=80',
   ],
 }
 
-export const CURRICULUM = {
-  eyebrow: 'Programa',
-  title: 'Plan de estudios del curso',
-  subtitle:
-    '12 módulos progresivos, de los fundamentos a la práctica clínica avanzada. Contenido placeholder: sustituir por el temario real.',
-  modules: [
+export const ABOUT = {
+  title: 'EAPMED | European Academy of Personalized Medicine',
+  description:
+    'Un evento médico, dinámico y vanguardista, diseñado por el Dr. Vinnerson Dall\'Ó y la Dra. Andréia Sánchez, los organizadores del evento TOUR, su sello inspirador de la medicina.',
+  cards: [
     {
-      number: '01',
-      title: 'Fundamentos y bases científicas',
-      lessons: ['Introducción y objetivos del curso', 'Bases fisiopatológicas', 'Evidencia científica actual'],
-      duration: '3 h',
-    },
-    {
-      number: '02',
-      title: 'Diagnóstico clínico',
-      lessons: ['Historia clínica y exploración', 'Pruebas complementarias', 'Diagnóstico diferencial'],
-      duration: '4 h',
-    },
-    {
-      number: '03',
-      title: 'Abordaje terapéutico',
-      lessons: ['Tratamiento de primera línea', 'Manejo farmacológico', 'Seguimiento del paciente'],
-      duration: '4 h',
-    },
-    {
-      number: '04',
-      title: 'Casos clínicos comentados',
-      lessons: ['Caso clínico I', 'Caso clínico II', 'Discusión y conclusiones'],
-      duration: '3 h',
-    },
-    {
-      number: '05',
-      title: 'Práctica avanzada',
-      lessons: ['Técnicas avanzadas', 'Situaciones especiales', 'Complicaciones frecuentes'],
-      duration: '4 h',
-    },
-    {
-      number: '06',
-      title: 'Evaluación final y certificación',
-      lessons: ['Repaso general', 'Examen final', 'Obtención del certificado'],
-      duration: '2 h',
-    },
-  ],
-}
-
-export const INSTRUCTORS = {
-  eyebrow: 'Profesorado',
-  title: 'Aprende de especialistas en activo',
-  subtitle:
-    'Un claustro de médicos con trayectoria asistencial, docente e investigadora en hospitales y universidades europeas.',
-  items: [
-    {
-      name: 'Dra. Nombre Apellido',
-      role: 'Directora académica · Especialista',
-      bio: 'Más de 20 años de experiencia asistencial y docente. Placeholder de biografía.',
+      title: 'Entrevistas con expertos seleccionados',
+      description:
+        'Un formato de entrevistas con los expertos disponibles de las especialidades, para responder preguntas y ofrecer charlas inspiradoras.',
       image:
-        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80',
     },
     {
-      name: 'Dr. Nombre Apellido',
-      role: 'Coordinador docente · Especialista',
-      bio: 'Investigador y profesor universitario. Placeholder de biografía.',
+      title: 'Lugar del evento',
+      description:
+        'El evento tendrá lugar en la Real Academia de Medicina de Cataluña, donde el público presencial y los asistentes online podrán vivir la experiencia del encuentro.',
+      image:
+        'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      title: 'Programa',
+      description:
+        'Sesiones destacadas con invitados médicos internacionales de gran relevancia en sus especialidades, medicina regenerativa y medicina estética personalizada.',
+      image:
+        'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+    },
+  ],
+}
+
+export const EXPERTS = {
+  title: 'Experts',
+  description:
+    'Nombres líderes en referentes académicos internacionales con una trayectoria destacada en sus respectivas carreras.',
+  cta: 'Hacer inscripción',
+  // Headshots placeholder: sustituir por las fotos reales del claustro.
+  images: [
+    'https://randomuser.me/api/portraits/women/44.jpg',
+    'https://randomuser.me/api/portraits/men/32.jpg',
+    'https://randomuser.me/api/portraits/women/68.jpg',
+    'https://randomuser.me/api/portraits/men/45.jpg',
+    'https://randomuser.me/api/portraits/women/12.jpg',
+    'https://randomuser.me/api/portraits/men/76.jpg',
+    'https://randomuser.me/api/portraits/women/33.jpg',
+    'https://randomuser.me/api/portraits/men/22.jpg',
+    'https://randomuser.me/api/portraits/women/56.jpg',
+    'https://randomuser.me/api/portraits/men/61.jpg',
+    'https://randomuser.me/api/portraits/women/21.jpg',
+    'https://randomuser.me/api/portraits/men/14.jpg',
+    'https://randomuser.me/api/portraits/women/79.jpg',
+    'https://randomuser.me/api/portraits/men/52.jpg',
+    'https://randomuser.me/api/portraits/women/90.jpg',
+  ],
+}
+
+export const TOUR = {
+  titleLead: 'Inscripciones abiertas para el',
+  titleHighlight: 'TOUR EAPMED: Vision of the Experts',
+  titleYear: '2025',
+  rows: [
+    {
+      title: 'Real Academia De Medicina da Cataluña',
+      description: '',
+      image:
+        'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80',
+      imageSide: 'right' as const,
+    },
+    {
+      title: 'Expertos de diversas disciplinas',
+      description:
+        'Este encuentro reunirá a expertos, científicos y tecnólogos de diversas disciplinas para explorar los avances más innovadores en la búsqueda de una vida más saludable y de calidad, más allá de la estética física.',
+      image:
+        'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80',
+      imageSide: 'left' as const,
+    },
+    {
+      title: '"Guía EAPMED Vision of the Expert"',
+      description:
+        'Un libro que no solo informa, sino que también actúa como una guía práctica para quienes desean transformar su vida profesional y personal. Este recurso es esencial para vivir y aplicar el conocimiento compartido por nuestros seleccionados expertos en 2024.',
+      image:
+        'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=900&q=80',
+      imageSide: 'right' as const,
+    },
+    {
+      title: '¡La inscripción ya está abierta!',
+      description:
+        'Las temáticas más aludidas y de destaque en el mundo médico. Asegura tu plaza hoy mismo.',
+      image:
+        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80',
+      imageSide: 'left' as const,
+      link: { label: 'Temas abordados', href: '/#temas' },
+    },
+  ],
+}
+
+export const PARTICIPANTS = {
+  titleLead: 'Quem pode',
+  titleHighlight: 'participar?',
+  items: [
+    {
+      label: 'Medicina de Precisión',
+      color: '#4b7bf5',
+      image:
+        'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Medicina Estética',
+      color: '#93a7fd',
+      image:
+        'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Cirugía Plástica',
+      color: '#c4b5fd',
+      image:
+        'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Dermatología',
+      color: '#2dd4bf',
+      image:
+        'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Ginecología',
+      color: '#f9a8d4',
+      image:
+        'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Medicina Deportiva',
+      color: '#3b82f6',
+      image:
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Nutriología',
+      color: '#14b8a6',
+      image:
+        'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Endocrinología',
+      color: '#7dd3fc',
+      image:
+        'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=700&q=80',
+    },
+    {
+      label: 'Medicina Preventiva',
+      color: '#22d3ee',
+      image:
+        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80',
+    },
+  ],
+}
+
+export const VENUE = {
+  title: 'Real Academia de Medicina da Cataluña',
+  address: 'Dirección: Carrer del Carme 47, Barcelona',
+  description:
+    'Teatro del 6 de Noviembre a 1700, celebraremos una noche mágica con nuestros profesores y expertos para estrechar alianzas sólidas.',
+  images: [
+    'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=700&q=80',
+    'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=700&q=80',
+  ],
+}
+
+export const ORGANIZERS = {
+  title: 'Organizadores',
+  description:
+    'Reunieron sus sueños y experiencias para seguir una historia en la medicina.',
+  items: [
+    {
+      name: "Dr. Vinnerson Dall'Ó, MD, MSc",
+      role: 'CEO EAPMED',
       image:
         'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
     },
     {
-      name: 'Dra. Nombre Apellido',
-      role: 'Profesora · Especialista',
-      bio: 'Experta en su área con amplia actividad congresual. Placeholder de biografía.',
+      name: 'Dra. Andréia Sánchez García, MD',
+      role: 'Directora EAPMED',
       image:
-        'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
     },
   ],
 }
 
-export const TESTIMONIALS = {
-  eyebrow: 'Opiniones',
-  title: 'Lo que dicen nuestros alumnos',
-  items: [
-    {
-      quote:
-        'El mejor curso online que he hecho: contenido riguroso, casos reales y un profesorado siempre disponible. Lo recomiendo a cualquier compañero.',
-      name: 'Nombre Apellido',
-      role: 'Médica de familia',
-    },
-    {
-      quote:
-        'La flexibilidad fue clave para mí durante la residencia. Pude avanzar a mi ritmo y el certificado me sirvió para mi currículum.',
-      name: 'Nombre Apellido',
-      role: 'Residente de medicina interna',
-    },
-    {
-      quote:
-        'Material de altísima calidad y una plataforma muy cuidada. Se nota el nivel académico de la institución detrás.',
-      name: 'Nombre Apellido',
-      role: 'Estudiante de 6.º de Medicina',
-    },
-  ],
-}
-
-export const PRICING = {
-  eyebrow: 'Inscripción',
-  title: 'Una única matrícula, acceso completo',
-  subtitle: 'Sin cuotas ni sorpresas. Pago único y seguro con tarjeta a través de Stripe.',
-  includes: [
-    'Acceso de por vida a los 12 módulos',
-    '40 horas de vídeo y material descargable',
-    'Tutorías y foro privado con el profesorado',
-    'Casos clínicos comentados',
-    'Certificado oficial de la Academia',
-    'Actualizaciones del contenido incluidas',
-  ],
-  guarantee: 'Garantía de devolución de 14 días. Si el curso no es para ti, te devolvemos el importe íntegro.',
-  cta: 'Inscribirme ahora',
-}
-
-export const FAQ = {
-  eyebrow: 'Preguntas frecuentes',
-  title: 'Resolvemos tus dudas',
-  items: [
-    {
-      question: '¿A quién va dirigido el curso?',
-      answer:
-        'A médicos, residentes y estudiantes de ciencias de la salud que quieran actualizar y profundizar sus conocimientos con una formación online de nivel europeo.',
-    },
-    {
-      question: '¿Cuánto tiempo tengo para completarlo?',
-      answer:
-        'El acceso es de por vida: puedes completar el curso a tu ritmo, sin fechas límite, y volver al contenido siempre que lo necesites.',
-    },
-    {
-      question: '¿Obtendré un certificado?',
-      answer:
-        'Sí. Al superar la evaluación final recibirás un certificado digital de la Academia Europea de Medicina que acredita las horas y competencias del curso.',
-    },
-    {
-      question: '¿Cómo se realiza el pago?',
-      answer:
-        'El pago es único y se realiza de forma segura con tarjeta a través de Stripe. Recibirás la confirmación y el recibo por correo electrónico automáticamente.',
-    },
-    {
-      question: '¿Hay garantía de devolución?',
-      answer:
-        'Sí, dispones de 14 días desde la compra para solicitar la devolución íntegra del importe si el curso no cumple tus expectativas.',
-    },
-    {
-      question: '¿Cuándo empiezo tras inscribirme?',
-      answer:
-        'Inmediatamente. Tras confirmarse el pago recibirás un correo con tus credenciales de acceso al campus virtual.',
-    },
-  ],
+export const COORDINATOR = {
+  title: 'Coordenadora Científica',
+  name: 'Dra. Maíra Gonzalez, PhD',
+  image:
+    'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80',
 }
 
 export const FINAL_CTA = {
-  title: 'Da el siguiente paso en tu carrera médica',
-  subtitle:
-    'Únete a los más de 2.500 profesionales que ya se han formado con la Academia Europea de Medicina.',
-  cta: 'Inscribirme ahora',
+  textLead: 'Oportunidad única para elevar sus experiencias junto a',
+  textHighlight: 'los mejores expertos',
+  textTail: 'y líderes de la industria.',
+  cta: 'Hacer inscripción',
+  image:
+    'https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1600&q=80',
 }
 
-export const FOOTER = {
-  description:
-    'La Academia Europea de Medicina imparte formación online de excelencia para profesionales y estudiantes de ciencias de la salud.',
-  columns: [
-    {
-      title: 'Curso',
-      links: [
-        { label: 'Programa', href: '/#programa' },
-        { label: 'Metodología', href: '/#metodologia' },
-        { label: 'Profesorado', href: '/#profesorado' },
-        { label: 'Inscripción', href: '/#inscripcion' },
-      ],
-    },
-    {
-      title: 'Academia',
-      links: [
-        { label: 'Opiniones', href: '/#opiniones' },
-        { label: 'Preguntas frecuentes', href: '/#faq' },
-        { label: 'Contacto', href: 'mailto:info@eapmed.org' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Aviso legal', href: '#' },
-        { label: 'Política de privacidad', href: '#' },
-        { label: 'Condiciones de compra', href: '#' },
-      ],
-    },
+/* Resumen mostrado en el checkout */
+export const INSCRIPTION = {
+  includes: [
+    'Acceso completo al TOUR EAPMED 2025',
+    'Sesiones y entrevistas con +40 expertos',
+    'Guía EAPMED "Vision of the Expert"',
+    'Certificado de asistencia',
   ],
+  note: 'Recibirás el recibo y la confirmación de tu plaza por email.',
 }

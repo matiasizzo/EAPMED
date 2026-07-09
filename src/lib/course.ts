@@ -3,8 +3,8 @@
  * El importe se define aquí, en el servidor: el cliente nunca envía el precio.
  */
 export const COURSE = {
-  id: 'curso-eapmed-2026',
-  name: 'Curso Online — Academia Europea de Medicina',
+  id: 'tour-eapmed-2025',
+  name: 'TOUR EAPMED: Vision of the Experts 2025',
   // Precio en céntimos de euro. Placeholder: ajustar al precio real.
   priceCents: 49900,
   currency: 'eur' as const,
