@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { COURSE } from '@/lib/course'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
   // El importe se calcula siempre en el servidor: un solo curso, sin carrito.
   const totalCents = COURSE.priceCents
 
-  const paymentIntent = await stripe.paymentIntents.create({
+  const paymentIntent = await getStripe().paymentIntents.create({
     amount: totalCents,
     currency: COURSE.currency,
     automatic_payment_methods: { enabled: true },

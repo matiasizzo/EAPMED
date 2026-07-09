@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 
 export async function POST(req: NextRequest) {
   const body = await req.text()
@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
 
   let event
   try {
-    event = stripe.webhooks.constructEvent(body, sig, webhookSecret)
+    event = getStripe().webhooks.constructEvent(body, sig, webhookSecret)
   } catch {
     return NextResponse.json({ error: 'Webhook signature invalid' }, { status: 400 })
   }
